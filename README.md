@@ -1,5 +1,5 @@
 # cdcc
-Let's Encrypt for Continuous Deployment
+Continuous Deployment, Continuous Certification. Using external volume to keep certification.
 
 Example
 =======
