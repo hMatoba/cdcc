@@ -1,0 +1,6 @@
+# do daihoureekldayonthlmonthnteweekday command
+*/15n   *       *       *       *       run-parts /etc/periodic/hourly
+0       3       *       *       6       run-parts /etc/periodic/weekly
+0       5       1       *       *       run-parts /etc/periodic/monthly
+
+33      3       *       *       *       sh /app/cert/renew.sh
