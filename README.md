@@ -15,8 +15,6 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    fip: 199.245.56.122
-    size: s4
     links:
       - webapp:webapp1
     volumes: 
@@ -25,6 +23,8 @@ services:
       DOMAIN: 'example.com'
       E_MAIL: 'foobar@example.com'
       LINK_NAME: 'webapp1'
+    fip: 199.245.56.122
+    size: s4
   webapp:
     image: some_webapp
     ports:
