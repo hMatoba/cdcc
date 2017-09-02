@@ -18,7 +18,7 @@ services:
     fip: 199.245.56.122
     size: s4
     links:
-      - some_webapp:webapp1
+      - webapp:webapp1
     volumes: 
       - cdcc:/etc/letsencrypt
     environment:
