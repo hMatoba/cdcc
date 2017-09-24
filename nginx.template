@@ -12,8 +12,8 @@ http {
     server {
         listen *:443;
         ssl on;
-        ssl_certificate      /etc/letsencrypt/live/hmatoba.net/fullchain.pem;
-        ssl_certificate_key  /etc/letsencrypt/live/hmatoba.net/privkey.pem;
+        ssl_certificate      /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
+        ssl_certificate_key  /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
 
         location / {
             proxy_pass         http://app_servers;
