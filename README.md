@@ -27,6 +27,4 @@ services:
     size: s4
   webapp:
     image: some_webapp
-    ports:
-      - '80:80'
 ```
