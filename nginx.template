@@ -4,11 +4,25 @@ events { worker_connections 1024; }
  
 http {
     sendfile on;
- 
+
+    gzip on;
+    gzip_types text/plain
+               text/xml
+               text/css
+               application/xml
+               application/xhtml+xml
+               application/rss+xml
+               application/javascript
+               application/x-javascript
+               image/png
+               image/gif
+               image/jpeg;
+
+
     upstream app_servers {
         server ${LINK_NAME};
     }
- 
+
     server {
         listen *:443;
         ssl on;
