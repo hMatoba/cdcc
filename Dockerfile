@@ -1,7 +1,6 @@
-FROM alpine
+FROM nginx:alpine
 
 RUN apk update &&\
-    apk --no-cache add nginx &&\
     apk --no-cache add certbot &&\
     apk --no-cache add gettext &&\
     mkdir -p /app/cert &&\
