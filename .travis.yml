@@ -1,0 +1,11 @@
+services:
+ - docker
+
+script:
+ - docker build -t matoba/cdcc:${TRAVIS_BUILD_NUMBER} .
+
+after_success:
+ - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
+ - docker push matoba/cdcc:${TRAVIS_BUILD_NUMBER}
+ - docker tag matoba/cdcc:${TRAVIS_BUILD_NUMBER} matoba/cdcc:latest
+ - docker push matoba/cdcc:latest
