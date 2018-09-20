@@ -2,7 +2,6 @@ FROM nginx:alpine
 
 RUN apk update &&\
     apk --no-cache add certbot &&\
-    apk --no-cache add gettext &&\
     mkdir -p /app/cert &&\
     mkdir -p /run/nginx
 COPY nginx.template /etc/nginx/nginx.template
